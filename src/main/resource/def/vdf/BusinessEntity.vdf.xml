@@ -1,0 +1,18 @@
+<InputFormatDefinition vendor-id="BED" old-vendor-id="0">
+	<Name>Business Entity</Name>
+	<PageName>Business Entity Definition</PageName>
+	<Description>Business Entity Definition</Description>
+	<Splitter>xml.xml</Splitter>
+	<Settings showDecimals="true" nameIsIdentifier="true">
+		<Property id="BEName">
+			<Name>Business Entity Name</Name>
+			<Description>Name used for Database Upload</Description>
+			<Metadata type="Text" required="true" overwriteAllowed="true"/>
+		</Property>
+		<Property id="BEDescription">
+			<Name>Description</Name>
+			<Description>Description for Database Upload</Description>
+			<Metadata type="Text" required="false" overwriteAllowed="true"/>
+		</Property>
+	</Settings>
+</InputFormatDefinition>

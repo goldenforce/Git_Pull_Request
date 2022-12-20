@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by DCA (Financial Technologies International) -->
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by Financial Technologies International (Financial Technologies International) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="MappingFunctions">
+        <xs:annotation>
+            <xs:documentation>Comment describing your root element</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ExceptionTypes" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ExceptionType" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>The General Exception types with description</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Description" type="xs:string"/>
+                                        <xs:element name="MapperVersion" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:attribute name="from" type="xs:float" use="optional" default="1.0"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="Name" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MappingFunctionLibrary" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Description" type="xs:string"/>
+                            <xs:element name="MapperVersion" type="MapperVersion" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="Function" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:complexContent>
+                                        <xs:extension base="FunctionBase">
+                                            <xs:sequence>
+                                                <xs:element name="Description" type="xs:string"/>
+                                                <xs:element name="ShortDescription" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="InputParameter" minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:annotation>
+                                                        <xs:documentation>The Inputparameters for the Function</xs:documentation>
+                                                    </xs:annotation>
+                                                    <xs:complexType>
+                                                        <xs:complexContent>
+                                                            <xs:extension base="ParameterType">
+                                                                <xs:sequence>
+                                                                    <xs:element name="DefaultValue" type="xs:string" minOccurs="0">
+                                                                        <xs:annotation>
+                                                                            <xs:documentation>A Default value that can be used only by the Composer. The Mapper itself will ignore this.</xs:documentation>
+                                                                        </xs:annotation>
+                                                                    </xs:element>
+                                                                </xs:sequence>
+                                                                <xs:attribute name="Name" type="xs:string" use="required"/>
+                                                                <xs:attribute name="Nullable" type="xs:boolean" use="required">
+                                                                    <xs:annotation>
+                                                                        <xs:documentation>indicates whether the InputValue can be null (empty).
+Note: an Empty String is not null!!</xs:documentation>
+                                                                    </xs:annotation>
+                                                                </xs:attribute>
+                                                                <xs:attribute name="InputField" type="xs:boolean" use="optional" default="false">
+                                                                    <xs:annotation>
+                                                                        <xs:documentation>if this is true, the input must be an InputField with the defined datatype</xs:documentation>
+                                                                    </xs:annotation>
+                                                                </xs:attribute>
+                                                                <xs:attribute name="Relevance" type="xs:integer" use="optional"/>
+                                                                <xs:attribute name="ParameterIsList" type="xs:boolean" use="optional"/>
+                                                                <xs:attribute name="AllowDataType" type="xs:string" use="optional"/>																
+                                                            </xs:extension>
+                                                        </xs:complexContent>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                                <xs:element name="OutputParameter" type="ParameterType" minOccurs="0">
+                                                    <xs:annotation>
+                                                        <xs:documentation>The ReturnValue of the Function</xs:documentation>
+                                                    </xs:annotation>
+                                                </xs:element>
+                                                <xs:element name="Throws" minOccurs="0">
+                                                    <xs:annotation>
+                                                        <xs:documentation>List all possible exceptions this function can throw</xs:documentation>
+                                                    </xs:annotation>
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="Description" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="Exception" maxOccurs="unbounded">
+                                                                <xs:annotation>
+                                                                    <xs:documentation>The Exception should use a predefined type but should also describe the condition when it can occur.</xs:documentation>
+                                                                </xs:annotation>
+                                                                <xs:complexType>
+                                                                    <xs:sequence>
+                                                                        <xs:element name="Condition" type="xs:string"/>
+                                                                    </xs:sequence>
+                                                                    <xs:attribute name="Type" type="xs:string" use="required"/>
+                                                                    <xs:attribute name="from" type="MapperVersionType" use="optional"/>
+                                                                    <xs:attribute name="to" type="MapperVersionType" use="optional"/>
+                                                                </xs:complexType>
+                                                            </xs:element>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                                <xs:element name="Examples" minOccurs="0">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="Description" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="Example" maxOccurs="unbounded">
+                                                                <xs:complexType>
+                                                                    <xs:sequence>
+                                                                        <xs:element name="Comment" type="xs:string" minOccurs="0"/>
+                                                                        <xs:element name="InputParameter" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                                                                        <xs:element name="OutputParameter" type="xs:string" minOccurs="0"/>
+                                                                    </xs:sequence>
+                                                                </xs:complexType>
+                                                            </xs:element>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                            <xs:attribute name="obsolete" type="xs:string" use="optional"/>
+                                            <xs:attribute name="Type" type="FunctionType" use="required"/>
+                                            <xs:attribute name="VariableInput" type="xs:boolean" default="false">
+                                                <xs:annotation>
+                                                    <xs:documentation>If true the Function has a variable count of parameters. This means that the last parameter MUST be the ParameterCount.
+OneHasValue,AllHasValue</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:attribute>
+                                            <xs:attribute name="Operand" type="xs:string" use="optional"/>
+                                            <xs:attribute name="designerOnly" type="xs:boolean" use="optional"/>
+                                        </xs:extension>
+                                    </xs:complexContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="Name" type="xs:string" use="required">
+                            <xs:annotation>
+                                <xs:documentation>This is the Library Name the Mapper tries to load</xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="FunctionOverloading" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>Some Functions like an Add can have different Overloadings. We don't want the mapper to bother with that.
+We will declare different functions for each overload (int,double,...) with different names (AddInt,AddDouble,...). After that we will create a FunctionOverloading element with the name 'Add' and with subelements 'AddInt' and 'AddDouble'. 
+Now the Composer can support Functionoverloading by looking at this section, but can write the REAL Function name to the MSF File.
+
+To Support Backward Compatibility some functions do really exist and will have a Number. MapperVersions that do only support Numbers should use this functionallity.
+Future MapperVersion (no numbers, unambiguously functions) should simply omit it.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:complexContent>
+                            <xs:extension base="FunctionBase">
+                                <xs:sequence>
+                                    <xs:element name="Function" type="NameType" minOccurs="2" maxOccurs="unbounded"/>
+                                </xs:sequence>
+                            </xs:extension>
+                        </xs:complexContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Namespaces">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Namespace" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>The names of Functions or Overloadings can contain dots. This dots seperate namespaces from each other.
+This section should be used to provide optional description for this implicit declarated namespaces</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Description" type="xs:string"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="Name" type="NamespaceType" use="required"/>
+                                    <xs:attribute name="DisplayName" type="xs:string" use="optional"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="DocumentVersion" type="MapperVersionType" use="optional"/>
+            <xs:attribute name="Author" type="xs:string" use="required"/>
+        </xs:complexType>
+        <xs:unique name="ExceptionType_PK">
+            <xs:annotation>
+                <xs:documentation>The name of the ExceptionType must be unique</xs:documentation>
+            </xs:annotation>
+            <xs:selector xpath="ExceptionTypes/ExceptionType"/>
+            <xs:field xpath="@Name"/>
+        </xs:unique>
+        <xs:unique name="FunctionName_PK">
+            <xs:selector xpath="MappingFunctionLibrary/Function/Name | FunctionOverloading/Name | MappingFunctionLibrary/Function/Alias | FunctionOverloading/Alias">
+                <xs:annotation>
+                    <xs:documentation>All Names and Aliases must be unique</xs:documentation>
+                </xs:annotation>
+            </xs:selector>
+            <xs:field xpath="."/>
+        </xs:unique>
+        <xs:unique name="FunctionNumber_PK">
+            <xs:annotation>
+                <xs:documentation>All FunctionNumbers must be uniqe</xs:documentation>
+            </xs:annotation>
+            <xs:selector xpath="MappingFunctionLibrary/Function | FunctionOverloading"/>
+            <xs:field xpath="@FunctionNumber"/>
+        </xs:unique>
+        <xs:keyref name="TypeIsValid" refer="ExceptionType_PK">
+            <xs:selector xpath="MappingFunctionLibrary/Function/Throws/Exception"/>
+            <xs:field xpath="@Type"/>
+        </xs:keyref>
+        <xs:keyref name="FunctionIsValied" refer="FunctionName_PK">
+            <xs:selector xpath="FunctionOverloading/Function"/>
+            <xs:field xpath="."/>
+        </xs:keyref>
+    </xs:element>
+    <xs:complexType name="FunctionBase">
+        <xs:sequence>
+            <xs:element name="Name" type="NameType"/>
+            <xs:element name="MapperVersion" type="MapperVersion" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Alias" type="NameType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="FunctionNumber" type="xs:positiveInteger" use="optional">
+            <xs:annotation>
+                <xs:documentation>The old System was to identify the MappingFunctions by Numbers.
+This should be obsolete</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="ComposerOperand" type="xs:string" use="optional">
+            <xs:annotation>
+                <xs:documentation>if the functiontype is an operand (unary or binary) the composer should used the ComposerOperand as displayable.
+eg:
+1. Add --> +
+2. Equal --> ==</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:simpleType name="ParameterDataType" final="restriction">
+        <xs:annotation>
+            <xs:documentation>Describes the possible Datatypes for Input- and Outputparameters
+IntOrFloat is a special Datatype with the folowing properties:
+1. If used as an Inputparameter, it can be both: Integer or FloatingPoint
+2. If used as an Returnparameter one of the following will happen:
+	a. Some of the Inputparameter or also IntOrFloat: if all are Integers the returnvalue has to be treated as an Integer. Otherwise it shall be a FloatingPoint
+	b. If none if the Inputparameters is an IntOrFloat, the returnvalue is undetermined and can only be an input for other IntOrFloat parameters</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Boolean"/>
+            <xs:enumeration value="Integer"/>
+            <xs:enumeration value="FloatingPoint"/>
+            <xs:enumeration value="IntOrFloat"/>
+            <xs:enumeration value="String"/>
+            <xs:enumeration value="DateTime"/>
+            <xs:enumeration value="SubRecord"/>
+            <xs:enumeration value="TranslationTable"/>
+            <xs:enumeration value="Any"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="ParameterType">
+        <xs:annotation>
+            <xs:documentation>The Base class for Input- and Outputparameters</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="Description" type="xs:string"/>
+            <xs:element name="Range" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>condition: 
+from &lt;= Parameter &lt;= to
+the ranges a OR connected</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:attribute name="from" type="xs:string" use="optional"/>
+                    <xs:attribute name="to" type="xs:string" use="optional"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="Datatype" type="ParameterDataType" use="required"/>
+    </xs:complexType>
+    <xs:simpleType name="NamespaceType">
+        <xs:annotation>
+            <xs:documentation>The pattern definition for Namespaces</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\p{L}+(\.\p{L}+)*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="NameType">
+        <xs:annotation>
+            <xs:documentation>The pattern definition for FunctionNames and Aliases</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(\p{L}+\.)*(\p{L}|\p{N}|_)+"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="MapperVersionType">
+        <xs:annotation>
+            <xs:documentation>Describes how a Version should look</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d+(\.\d+){0,3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="MapperVersion">
+        <xs:annotation>
+            <xs:documentation>MappingLibraries and Functions are not the same on all Mapper Versions. This section should define the Version range were it exists.
+Due the fact the some functions exist in 1.x, not in 2.0 but in 2.1, we even have to support multiple ranges.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="Comments" type="xs:string" minOccurs="0"/>
+            <xs:element name="Obsolete" minOccurs="0">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string"/>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="from" type="MapperVersionType" use="required">
+            <xs:annotation>
+                <xs:documentation>The MapperVersion from where on this library/function exists.</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="to" type="MapperVersionType" use="optional">
+            <xs:annotation>
+                <xs:documentation>The MapperVersion where the existence of the library/function ends</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:simpleType name="FunctionType">
+        <xs:annotation>
+            <xs:documentation>Defines the possible basic Function Types</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Simple"/>
+            <xs:enumeration value="unaryOperator">
+                <xs:annotation>
+                    <xs:documentation>Unary operators appear before their operand and associate from right to left
+eg: !</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="binaryOperator">
+                <xs:annotation>
+                    <xs:documentation>A binary expression consists of two operands joined by a binary operator.
+eg: a == b, a != b, a &lt; b</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="FlowOperator">
+                <xs:annotation>
+                    <xs:documentation>if, while, ...
+These are not real functions, but statements that will change the flow of the script</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

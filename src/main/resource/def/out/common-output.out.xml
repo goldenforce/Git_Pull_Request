@@ -1,0 +1,57 @@
+<OutputFormatDefinition type="COMMON-OUTPUT">
+	<Name>Common Output</Name>
+	<Settings>
+		<!--<Property id="SendNullMacro">
+			<Name>Send Null Macro</Name>
+			<Description>Start of data delimiter</Description>
+			<DefaultValue>SET_TO_NULL</DefaultValue>
+			<Metadata type="Text" required="true"/>
+		</Property>-->
+		<Property id="AddTZIndicators">
+			<Name>Add TZ Indicators</Name>
+			<Description>Adds TimeZone Attributes like IGNORETZ and TZ.</Description>
+			<DefaultValue>true</DefaultValue>
+			<Metadata type="DropDown">
+				<Values>
+					<Value display="true" value="true"/>
+					<Value display="false" value="false"/>
+				</Values>
+			</Metadata>
+		</Property>
+		<Property id="AddVendorMnemonic">
+			<Name>Add VENDOR_MNEMONIC attribute.</Name>
+			<Description>Adds VENDOR_MNEMONIC attribute in output message if set to true.</Description>
+			<DefaultValue>true</DefaultValue>
+			<Metadata type="DropDown">
+				<Values>
+					<Value display="true" value="true"/>
+					<Value display="false" value="false"/>
+				</Values>
+			</Metadata>
+		</Property>			
+		<Property id="DateTimeOutputFormat"> 
+			<Name>Output Date Time Format</Name>
+			<Description>Output DateTime Format</Description>
+			<DefaultValue>%M-%D-%Y %H:%I:%S %A</DefaultValue>
+			<Metadata type="Text" />
+		</Property>
+		<Property id="TimeStampOutputFormat"> 
+			<Name>Output Time Stamp Format</Name>
+			<Description>Output Time Stamp Format</Description>
+			<DefaultValue>%M-%D-%Y %H:%I:%S.%f %A</DefaultValue>
+			<Metadata type="Text" />
+		</Property>
+		<Property id="OutputEncoding">
+			<Name>Output Encoding</Name>
+			<Description>XML Output Encoding</Description>
+			<DefaultValue>UTF-8</DefaultValue>
+			<Metadata type="Encoding" required="true"/>
+		</Property>
+		<Property id="DefaultEmptyNumericsToZero">
+			<Name>Default Empty Numerics To Zero</Name>
+			<Description>Use Zeror as Default Value for Empty Numerics</Description>
+			<DefaultValue>FALSE</DefaultValue>
+			<Metadata type="Check" />
+		</Property>
+	</Settings>
+</OutputFormatDefinition>

@@ -1,0 +1,17 @@
+<OutputFormatDefinition type="VENDOR-TABLES-SETTINGS">
+	<Name>Flat Vendor Record View Settings</Name>
+	<Settings>
+		<Property id="DDLName" overridable="true" >
+			<Name>Record View DDL Name</Name>
+			<Description>DDL Name for Record View (will be prefixed by 'FT_VRV_')</Description>
+			<DefaultValue></DefaultValue>
+			<Metadata type="Text" />
+		</Property>
+		<Property id="MessageType" overridable="true" >
+			<Name>Record View Message Type</Name>
+			<Description>Restricts the rows returned in the Flat Vendor Record View</Description>
+			<DefaultValue></DefaultValue>
+			<Metadata type="Text" />
+		</Property>
+	</Settings>
+</OutputFormatDefinition>

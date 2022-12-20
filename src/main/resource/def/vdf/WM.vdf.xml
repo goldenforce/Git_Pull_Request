@@ -1,0 +1,73 @@
+<InputFormatDefinition vendor-id="WM" old-vendor-id="0">
+	<Name>WM</Name>
+	<Description>Wertpapier Mitteilung (XML format)</Description>
+	<Splitter>xml.xml</Splitter>
+	<Settings subRecordsMapable="true">
+		<Property id="DeletePattern">
+			<Name>Delete Pattern</Name>
+			<Description>Regular expression to identify delete pattern.</Description>
+			<DefaultValue/>
+			<Metadata type="Text" />
+		</Property>
+		<Property id="DeleteIndicatorAttributes">
+			<Name>Semi Colon seperated Delete Inidcator Attributes</Name>
+			<Description>Regular expression to identify delete pattern.</Description>
+			<DefaultValue/>
+			<Metadata type="Text" />
+		</Property>
+		<Property id="XML.IdentifierAttributes">
+			<Name>Identifier Attributes</Name>
+			<Description>List of attributes, which define the WM element identifier</Description>
+			<DefaultValue>cl, nm</DefaultValue>
+			<Metadata type="Text" required="true" overwriteAllowed="true"/>
+		</Property>
+		<Property id="XML.ValueAttributes">
+			<Name>Value Attribute(s)</Name>
+			<Description>Attribute or list of attributes, which define the value of an element</Description>
+			<DefaultValue>vl</DefaultValue>
+			<Metadata type="Text" required="true" overwriteAllowed="true"/>
+		</Property>
+		<Property id="XML.IgnoreAttributes">
+			<Name>Attributes to be ignored</Name>
+			<Description>List of attributes, which can be ignored during parsing step:</Description>
+			<DefaultValue>no, nm</DefaultValue>
+			<Metadata type="Text" required="true" overwriteAllowed="true"/>
+		</Property>
+		<Property id="DateTimeFormat">
+			<Name>Date Time Format</Name>
+			<Description>Input DateTime Format</Description>
+			<DefaultValue>%D.%M.%Y</DefaultValue>
+			<Metadata type="Text" overwriteAllowed="true"/>
+		</Property>
+		<Property id="TimeStampFormat"> 
+			<Name>Time Stamp Format</Name>
+			<Description>Input Time Stamp Format</Description>
+			<DefaultValue>%D.%M.%Y %H:%I:%S.%f</DefaultValue>
+			<Metadata type="Text" required="true" overwriteAllowed="true"/>
+		</Property>
+		<Property id="NullIdentifiers">
+			<Name>Null Identifiers</Name>
+			<Description>Null Identifiers</Description>
+			<Metadata type="Text" />
+		</Property>
+		<Property id="TrimFields">
+			<Name>Trim Fields</Name>
+			<Description>Trim Input Fields</Description>
+			<DefaultValue>NONE</DefaultValue>
+			<Metadata type="DropDown">
+				<Values>
+					<Value display="Both" value="BOTH"/>
+					<Value display="Left" value="LEFT"/>
+					<Value display="Right" value="RIGHT"/>
+					<Value display="None" value="NONE"/>
+				</Values>
+			</Metadata>
+		</Property>
+		<Property id="DecimalSeparator">
+			<Name>Decimal Separator</Name>
+			<Description>Decimal Separator</Description>
+			<DefaultValue>.</DefaultValue>
+			<Metadata type="Char" />
+		</Property>
+	</Settings>
+</InputFormatDefinition>

@@ -1,0 +1,32 @@
+<EngineConfigRuntimeParameter>
+  <RunetimeParameters>
+    <RunetimeParameter name="EnableVSH" defaultValue="false" dataType="boolean" label="Enable VSH" />
+    <RunetimeParameter name="EnableModel" defaultValue="true" dataType="boolean" label="Enable Model" />
+    <RunetimeParameter name="CompleteOnly" defaultValue="false" dataType="boolean" label="Complete Only" />
+    <RunetimeParameter name="EnableInternalDomainValueCheck" defaultValue="true" dataType="boolean"
+      label="Enable Internal Domain Value Check" />
+    <RunetimeParameter name="ExtendedInternalDomainValueCheck" defaultValue="false" dataType="boolean"
+      label="Extended Internal Domain Value Check" />
+    <RunetimeParameter name="UseTimeSeries" defaultValue="true" dataType="boolean" label="Use TimeSeries" />
+    <RunetimeParameter name="CacheTableObjects" defaultValue="true" dataType="boolean" label="Cache Table Objects" />
+    <RunetimeParameter name="EnableChangeApproval" defaultValue="false" dataType="boolean"
+      label="Enable Change Approval" />
+    <RunetimeParameter name="UseChangeApprPostAuthorization" defaultValue="false" dataType="boolean"
+      label="Use Change Approval Post Authorization" />
+    <RunetimeParameter name="UseSubscriptionNotification" defaultValue="false" dataType="boolean"
+      label="Use Subscription Notification" />
+    <RunetimeParameter name="EnableDeprecatedChangeApprovalLogic" defaultValue="false" dataType="boolean"
+      label="Enable Deprecated Change Approval Logic" />
+    <RunetimeParameter name="EnableDefinitionOfEOI" defaultValue="true" dataType="boolean"
+      label="Enable Definition Of EOI" />
+    <RunetimeParameter name="CacheTableObjectResults" defaultValue="FT_T_MKID;FT_T_ISID;FT_T_GUNT;FT_T_INCL;FT_T_ISSU"
+      dataType="string" label="Cache Tabl Object Results" />
+    <RunetimeParameter name="TableDlls" defaultValue="DynamicTO" dataType="string" label="Table Dlls" />
+    <RunetimeParameter name="RuleDlls" defaultValue="GenericRules;CamsRules;BenchmarkRules;SRJavaRules"
+      dataType="string" label="Rule Dlls" />
+    <RunetimeParameter name="ILOGEngineCount" defaultValue="0" dataType="integer" label="ILOG Engine Count" />
+    <RunetimeParameter name="NormalLockExpiryDays" defaultValue="0" dataType="integer" label="Normal Lock Expiry Days" />
+    <RunetimeParameter name="PerpetualLockExpiryDays" defaultValue="0" dataType="integer"
+      label="Perpetual Lock Expiry Days" />
+  </RunetimeParameters>
+</EngineConfigRuntimeParameter>

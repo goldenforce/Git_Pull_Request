@@ -1,0 +1,11 @@
+<OutputFormatDefinition type="MAPPING-FRAGMENTS-SETTINGS">
+	<Name>MFL Settings</Name>
+	<Settings>
+		<Property id="BaseMDX">
+			<Name>Basic MDX File</Name>
+			<Description>Provides Layout and Translation Tables for usage in Mapping Fragments</Description>
+			<DefaultValue></DefaultValue>
+			<Metadata type="File" required="true" filter="mdx" />
+		</Property>
+	</Settings>
+</OutputFormatDefinition>

@@ -1,0 +1,53 @@
+<OutputFormatDefinition type="CSVMessage">
+	<Name>Variable</Name>
+	<Description>Delimited Output format</Description>
+	<Settings>
+		<Property id="AddTZIndicators">
+			<Name>Add TZ Indicators</Name>
+			<Description>Add TimeZone Attributes like IGNORETZ and TZ</Description>
+			<DefaultValue>true</DefaultValue>
+			<Metadata type="DropDown">
+				<Values>
+					<Value display="true" value="true"/>
+					<Value display="false" value="false"/>
+				</Values>
+			</Metadata>
+		</Property>
+		<Property id="DelimiterCharacter">
+			<Name>Delimiter Character</Name>
+			<Description>Delimiter Character</Description>
+			<DefaultValue>,</DefaultValue>
+			<Metadata type="Text" required="true"/>
+		</Property>
+		<Property id="EscapeCharacter">
+			<Name>Escape Character</Name>
+			<Description>Escape Character</Description>
+			<DefaultValue>\</DefaultValue>
+			<Metadata type="Text" required="false"/>
+		</Property>
+		<Property id="QuoteCharacter">
+			<Name>Quote Character</Name>
+			<Description>Quote Character</Description>
+			<DefaultValue/>
+			<Metadata type="Text" required="false"/>
+		</Property>
+		<Property id="keyvalue">
+			<Name>Generate Key-Value Pairs</Name>
+			<Description>Adds the field name to the resulting output value (fieldname=&lt;mapped value&gt;)</Description>
+			<DefaultValue>false</DefaultValue>
+			<Metadata type="Check" required="false"/>
+		</Property>
+		<Property id="EnclosingCharacter">
+			<Name>Enclosing Character</Name>
+			<Description>Adds the specified character as prefix and suffix to the resulting output value.</Description>
+			<DefaultValue/>
+			<Metadata type="Text" required="false"/>
+		</Property>		
+		<Property id="EnableEnclosingCharacter">
+			<Name>Enable enclosing character</Name>
+			<Description>Flag to enable Enclosing Character setting (disabled by default.)</Description>
+			<DefaultValue>false</DefaultValue>
+			<Metadata type="Check" required="false"/>
+		</Property>		
+	</Settings>
+</OutputFormatDefinition>

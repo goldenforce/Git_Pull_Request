@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!---->
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by Mike (Financial Technologies International) -->
+<xs:schema targetNamespace="http://www.ftisoft.com/swift/dictionary" xmlns:sw="http://www.ftisoft.com/swift/dictionary" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="Field">
+		<xs:sequence>
+			<xs:element name="Description" type="xs:string" minOccurs="0"/>
+			<xs:element name="SubField" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="name" type="xs:string" use="required"/>
+					<xs:attribute name="required" type="xs:boolean" default="true"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="name" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="2"/>
+					<xs:maxLength value="3"/>
+					<xs:pattern value="\d\d\p{Lu}?"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="format" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="MsgField">
+		<xs:choice minOccurs="0">
+			<xs:element name="Qualifier" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="mandatory" type="xs:boolean" default="false"/>
+					<xs:attribute name="repeating" type="xs:boolean" default="false"/>
+					<xs:attribute name="name">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:minLength value="4"/>
+								<xs:maxLength value="4"/>
+								<xs:pattern value="\p{Lu}\p{Lu}\p{Lu}\p{Lu}"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Unqualified">
+				<xs:complexType>
+					<xs:attribute name="mandatory" type="xs:boolean" default="false"/>
+					<xs:attribute name="repeating" type="xs:boolean" default="false"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="Record">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Record" type="sw:Record"/>
+			<xs:element name="FieldChoice" type="sw:FieldChoiceType"/>
+			<xs:element name="Field" type="sw:MsgField"/>
+		</xs:choice>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="mandatory" type="xs:boolean" default="false"/>
+		<xs:attribute name="repeating" type="xs:boolean" default="false"/>
+	</xs:complexType>
+	<xs:element name="Swift">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Fields" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Field" type="sw:Field" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+						<xs:attribute name="BusinessClass" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Message" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="Record" type="sw:Record"/>
+							<xs:element name="FieldChoice" type="sw:FieldChoiceType"/>
+							<xs:element name="Field" type="sw:MsgField"/>
+						</xs:choice>
+						<xs:attribute name="type" type="xs:string" use="required"/>
+						<xs:attribute name="name" type="xs:string"/>
+						<xs:attribute name="business" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:unique name="UniqueFieldName">
+			<xs:selector xpath="sw:Fields/sw:Field"/>
+			<xs:field xpath="@name"/>
+		</xs:unique>
+		<xs:keyref name="FieldIsValid" refer="sw:UniqueFieldName">
+			<xs:selector xpath="sw:Message/sw:Field | sw:Message/*/sw:Field | sw:Message/*/*/sw:Field | sw:Message/*/*/*/sw:Field | sw:Message/*/*/*/*/sw:Field"/>
+			<xs:field xpath="@name"/>
+		</xs:keyref>
+	</xs:element>
+	<xs:complexType name="FieldChoiceType">
+		<xs:sequence>
+			<xs:element name="Qualifier" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="mandatory" type="xs:boolean" default="false"/>
+					<xs:attribute name="repeating" type="xs:boolean" default="false"/>
+					<xs:attribute name="options" type="xs:string" use="required"/>
+					<xs:attribute name="name">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:minLength value="4"/>
+								<xs:maxLength value="4"/>
+								<xs:pattern value="\p{Lu}\p{Lu}\p{Lu}\p{Lu}"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Field" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="name" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+	</xs:complexType>
+</xs:schema>

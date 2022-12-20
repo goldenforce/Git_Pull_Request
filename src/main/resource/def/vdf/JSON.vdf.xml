@@ -1,0 +1,32 @@
+<InputFormatDefinition vendor-id="JSON" old-vendor-id="22">
+	<Name>JSON</Name>
+	<Description>Supports all kind of JSON strings</Description>
+	<Splitter>LineByLine.xml</Splitter>
+	<Settings subRecordsMapable="true">
+		<Property id="DateTimeFormat"> 
+			<Name>Date Time Format</Name>
+			<Description>Input DateTime Format</Description>
+			<DefaultValue>%Y%M%D%H%I%S</DefaultValue>
+			<Metadata type="Text" required="true" overwriteAllowed="true"/>
+		</Property>
+		<Property id="TimeStampFormat"> 
+			<Name>Time Stamp Format</Name>
+			<Description>Input Time Stamp Format</Description>
+			<DefaultValue>%Y%M%D%H%I%S.%f</DefaultValue>
+			<Metadata type="Text" required="true" overwriteAllowed="true"/>
+		</Property>
+		<Property id="TrimFields">
+			<Name>Trim Fields</Name>
+			<Description>Trim Input Fields</Description>
+			<DefaultValue>BOTH</DefaultValue>
+			<Metadata type="DropDown">
+				<Values>
+					<Value display="Both" value="BOTH"/>
+					<Value display="Left" value="LEFT"/>
+					<Value display="Right" value="RIGHT"/>
+					<Value display="None" value="NONE"/>
+				</Values>
+			</Metadata>
+		</Property>
+	</Settings>
+</InputFormatDefinition>

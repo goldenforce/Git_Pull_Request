@@ -1,0 +1,24 @@
+<OutputFormatDefinition type="BusinessEntity">
+	<Name>Business Entity</Name>
+	<Description>Business Entity Definition</Description>
+	<Settings>
+		<Property id="DocType">
+			<Name>DocType Declaration</Name>
+			<Description>DocType Declaration</Description>
+			<DefaultValue>{MessageName}</DefaultValue>
+			<Metadata type="Text" required="true" hideAtCreation="true"/>
+		</Property>
+		<Property id="SystemId">
+			<Name>DocType SystemId</Name>
+			<Description>DocType SystemId</Description>
+			<DefaultValue>fti://repository/dtd/{MessageName}</DefaultValue>
+			<Metadata type="Text" required="true" hideAtCreation="true"/>
+		</Property>
+		<Property id="OutputEncoding">
+			<Name>Output Encoding</Name>
+			<Description>Output message encoding. Leave blank to use default output encoding.</Description>
+			<DefaultValue></DefaultValue>
+			<Metadata type="Encoding"/>
+		</Property>
+	</Settings>
+</OutputFormatDefinition>

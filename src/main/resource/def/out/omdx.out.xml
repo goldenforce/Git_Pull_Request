@@ -1,0 +1,11 @@
+<OutputFormatDefinition type="OMDX-SETTINGS">
+	<Name>Override Mapping Definition Settings</Name>
+	<Settings>
+		<Property id="OMDX.Base">
+			<Name>(O)MDX File for Override</Name>
+			<Description>Base Mapping Definition to be overriden/extended.</Description>
+			<DefaultValue></DefaultValue>
+			<Metadata type="File" required="true" filter="mdx,omdx" readonly="true" multiline="true" />
+		</Property>
+	</Settings>
+</OutputFormatDefinition>

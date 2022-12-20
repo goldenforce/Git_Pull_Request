@@ -1,0 +1,11 @@
+<OutputFormatDefinition type="TRANSLATIONTABLE">
+	<Name>Common Settings</Name>
+	<Settings>
+		<Property id="description">
+			<Name>Description</Name>
+			<Description>Description of this Translation Table</Description>
+			<DefaultValue></DefaultValue>
+			<Metadata type="Text" multiline="4" />
+		</Property>
+	</Settings>
+</OutputFormatDefinition>

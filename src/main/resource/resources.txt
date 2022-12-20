@@ -1,0 +1,9 @@
+BusinessEntity.out.xml
+common-output.out.xml
+common.out.xml
+CSVMessage.out.xml
+GSReference.out.xml
+mappingfragments.out.xml
+omdx.out.xml
+translationtable.out.xml
+vendortables.out.xml

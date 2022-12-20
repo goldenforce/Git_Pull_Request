@@ -1,0 +1,49 @@
+<InputFormatDefinition vendor-id="SnPSDM_Kenny" old-vendor-id="21">
+	<Name>SnPSDM Kenny</Name>
+	<Description>SnPSDM Kenny Input Message</Description>
+    <Splitter>fidelity/fixed.xml</Splitter>
+	<Settings fixedFormat="true" showDecimals="true">
+		<Property id="DateTimeFormat"> 
+			<Name>Date Time Format</Name>
+			<Description>Input DateTime Format</Description>
+			<DefaultValue>%Y%M%D%H%I%S</DefaultValue>
+			<Metadata type="Text" required="true" overwriteAllowed="true"/>
+		</Property>
+		<Property id="IsSingleCharDataDelimiter">
+          <Name>Is Single Char Data Delimiter</Name>
+          <Description>IsSingleCharDataDelimiter</Description>
+          <DefaultValue>TRUE</DefaultValue>
+          <Metadata type="Check"/>
+        </Property>
+		<Property id="TimeStampFormat"> 
+			<Name>Time Stamp Format</Name>
+			<Description>Input Time Stamp Format</Description>
+			<DefaultValue>%Y%M%D%H%I%S.%f</DefaultValue>
+			<Metadata type="Text" required="true" overwriteAllowed="true"/>
+		</Property>
+		<Property id="NullIdentifiers"> 
+			<Name>Null Identifiers</Name>
+			<Description>Null Identifiers: a semi-colon separated list to identify input values which need to be handled as &lt;null&gt; values (such as N.A.). Also regular expressions are allowed which must be identified by the REGEX: prefix, e.g.: REGEX:-9+[2-4]010*</Description>
+			<Metadata type="Text"/>
+		</Property>
+		<Property id="TrimFields">
+			<Name>Trim Fields</Name>
+			<Description>Trim Input Fields</Description>
+			<DefaultValue>BOTH</DefaultValue>
+			<Metadata type="DropDown">
+				<Values>
+					<Value display="Both" value="BOTH"/>
+					<Value display="Left" value="LEFT"/>
+					<Value display="Right" value="RIGHT"/>
+					<Value display="None" value="NONE"/>
+				</Values>
+			</Metadata>
+		</Property>
+		<Property id="DecimalSeparator"> 
+			<Name>Decimal Separator</Name>
+			<Description>Decimal Separator</Description>
+			<DefaultValue>.</DefaultValue>
+			<Metadata type="Char"/>
+		</Property>
+	</Settings>
+</InputFormatDefinition>

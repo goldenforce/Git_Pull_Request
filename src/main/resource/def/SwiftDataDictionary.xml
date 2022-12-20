@@ -1,0 +1,1354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Swift xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ftisoft.com/swift/dictionary SwiftDictionary.xsd" xmlns="http://www.ftisoft.com/swift/dictionary" xmlns:sw="http://www.ftisoft.com/swift/dictionary">
+	<Fields BusinessClass="Currency">
+		<Field format=":4!c//3!a" name="11A">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Currency Code" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Type of Related Financial Instrument">
+		<Field format=":4!c/[4!c[4c]]/30z" name="12A">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DataSourceScheme" required="false"/>
+			<SubField name="InstrumentCodeorDescription" required="true"/>
+		</Field>
+		<Field format=":4!c/[4!c[4c]]/4!c" name="12B">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DataSourceScheme" required="false"/>
+			<SubField name="Instrument Code" required="true"/>
+		</Field>
+		<Field format=":4!c//6!c" name="12C">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="CFICode" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Number Identification">
+		<Field format=":4!c//3!c" name="13A">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="NumberIdentification" required="true"/>
+		</Field>
+		<Field format=":4!c/[4!c[4c]]/30z" name="13B">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DataSourceScheme" required="false"/>
+			<SubField name="Number" required="true"/>
+		</Field>
+		<Field format=":4!c//4!c" name="13F">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="NumberIdentification" required="true"/>
+		</Field>
+		<Field format=":4!c//4!n" name="13G">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="NumberIdentification" required="true"/>
+		</Field>
+		<Field format=":4!c//2!n" name="13H">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="NumberIdentification" required="true"/>
+		</Field>
+		<Field format=":4!c//8c" name="13I">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="NumberIdentification" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Start of Block">
+		<Field format="16c[/3!n[/3!n]]" name="16R">
+			<SubField name="StartofBlock" required="true"/>
+			<SubField name="NumberofOccurences" required="false"/>
+			<SubField name="Total NumberofOccurences" required="false"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="End of Block">
+		<Field format="16c[/3!n]" name="16S">
+			<SubField name="EndofBlock" required="true"/>
+			<SubField name="NumberofOccurences" required="false"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Flag">
+		<Field format=":4!c//1!a" name="17B">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Flag" required="false"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Amount">
+		<Field format=":4!c//[s]3!a15d" name="19A">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Sign" required="false"/>
+			<SubField name="CurrencyCode" required="true"/>
+			<SubField name="Amount" required="true"/>
+		</Field>
+		<Field format=":4!c//3!a15d" name="19B">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="CurrencyCode" required="true"/>
+			<SubField name="Amount" required="true"/>
+		</Field>
+		<Field format=":4!c//[s]3!a17d" name="19C">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Sign" required="false"/>
+			<SubField name="CurrencyCode" required="true"/>
+			<SubField name="Amount" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Reference">
+		<Field format="16x" name="20">
+			<Description>Transaction Reference Number</Description>
+			<SubField name="Reference" required="true"/>
+		</Field>
+		<Field format=":4!c//16z" name="20C">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Reference" required="true"/>
+		</Field>
+		<Field format=":4!c//25z" name="20D">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Reference" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Indicator">
+		<Field format=":4!c/[4!c[4c]]/4!c" name="22F">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DataSourceScheme" required="false"/>
+			<SubField name="Indicator" required="true"/>
+		</Field>
+		<Field format=":4!c//4!c" name="22H">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Indicator" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Function of the Message">
+		<Field format="4!c[/4!c]" name="23G">
+			<SubField name="Function" required="true"/>
+			<SubField name="SubFunction" required="false"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Reason Code">
+		<Field format=":4!c/[4!c[4c]]/4!c" name="24B">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DataSourceScheme" required="false"/>
+			<SubField name="ReasonCode" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Status Code">
+		<Field format=":4!c/[4!c[4c]]/4!c" name="25D">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DataSourceScheme" required="false"/>
+			<SubField name="StatusCode" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Page Number / Continuation Indicator">
+		<Field format="5n/4!c" name="28E">
+			<SubField name="PageNumber" required="true"/>
+			<SubField name="ContinuationIndicator" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Identification of a Security">
+		<Field format="[ISIN1!e12!c]&#x0a;[5*35z]" name="35B">
+			<SubField name="IdentificationofaSecurity" required="false"/>
+			<SubField name="DescriptionoftheSecurity-Line1" required="false"/>
+		</Field>
+		<Field format="12!c" name="35I">
+			<SubField name="ISIN" required="true"/>
+		</Field>
+		<Field format="2!a/4!c/30z" name="35J">
+			<SubField name="CountryCode" required="true"/>
+			<SubField name="NumberingAgencyCode" required="true"/>
+			<SubField name="LocalCode" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Quantity of Financial Instrument">
+		<Field format=":4!c//4!c/15d" name="36B">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="QuantityTypeCode" required="true"/>
+			<SubField name="Quantity" required="true"/>
+		</Field>
+		<Field format=":4!c//4!c" name="36C">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="QuantityCode" required="true"/>
+		</Field>
+		<Field format=":4!c//4!c/17d" name="36D">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="QuantityTypeCode" required="true"/>
+			<SubField name="Quantity" required="true"/>
+		</Field>
+        <Field format=":4!c//4!c/[s]16d" name="36E">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="QuantityTypeCode" required="true"/>
+            <SubField name="Sign" required="false"/>
+			<SubField name="Quantity" required="true"/>
+	    </Field>
+	</Fields>
+	<Fields BusinessClass="Period">
+		<Field format=":4!c//8!n/8!n" name="69A">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Date" required="true"/>
+		</Field>
+		<Field format=":4!c//8!n6!n/8!n6!n" name="69B">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Date" required="true"/>
+			<SubField name="Time" required="true"/>
+			<SubField name="Date" required="true"/>
+			<SubField name="Time" required="true"/>
+		</Field>
+		<Field format=":4!c//8!n/4!c" name="69C">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Date" required="true"/>
+			<SubField name="DateCode" required="true"/>
+		</Field>
+		<Field format=":4!c//8!n6!n/4!c" name="69D">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Date" required="true"/>
+			<SubField name="Time" required="true"/>
+			<SubField name="DateCode" required="true"/>
+		</Field>
+		<Field format=":4!c//4!c/8!n" name="69E">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DateCode" required="true"/>
+			<SubField name="Date" required="true"/>
+		</Field>
+		<Field format=":4!c//4!c/8!n6!n" name="69F">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DateCode" required="true"/>
+			<SubField name="Date" required="true"/>
+			<SubField name="Time" required="true"/>
+		</Field>
+		<Field format=":4!c//8!n6!n/8!n6!n" name="69H">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Date" required="true"/>
+			<SubField name="Time" required="true"/>
+			<SubField name="Date" required="true"/>
+			<SubField name="Time" required="true"/>
+		</Field>
+		<Field format=":4!c//4!c/8!n6!n" name="69I">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DateCode" required="true"/>
+			<SubField name="Date" required="true"/>
+			<SubField name="Time" required="true"/>
+		</Field>
+		<Field format=":4!c//4!c" name="69J">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DateCode" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Narrative">
+		<Field format=":4!c//4*35z" name="70C">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Narrative" required="true"/>
+		</Field>
+		<Field format=":4!c//6*35z" name="70D">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Narrative" required="true"/>
+		</Field>
+		<Field format=":4!c//10*35z" name="70E">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Narrative" required="true"/>
+		</Field>
+		<Field format=":4!c//8000z" name="70F">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Narrative" required="true"/>
+		</Field>
+		<Field format=":4!c//variable length" name="70G">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Narrative" required="true"/>
+		</Field>
+		<Field format=":4!c//35z" name="70H">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Narrative" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Price">
+		<Field format=":4!c//4!c/15d" name="90A">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="PercentageTypeCode" required="true"/>
+			<SubField name="Price" required="true"/>
+		</Field>
+		<Field format=":4!c//4!c/3!a15d" name="90B">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="AmountTypeCode" required="true"/>
+			<SubField name="CurrencyCode" required="true"/>
+			<SubField name="Price" required="true"/>
+		</Field>
+		<Field format=":4!c//4!c" name="90E">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="PriceCode" required="true"/>
+		</Field>
+		<Field format=":4!c//4!c/3!a15d/4!c/15d" name="90F">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="AmountTypeCode" required="true"/>
+			<SubField name="CurrencyCode" required="true"/>
+			<SubField name="Amount" required="true"/>
+			<SubField name="QuantityTypeCode" required="true"/>
+			<SubField name="Quantity" required="true"/>
+		</Field>
+		<Field format=":4!c//4!c/3!a15d/3!a15d" name="90J">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="AmountTypeCode" required="true"/>
+			<SubField name="CurrencyCode" required="true"/>
+			<SubField name="Amount" required="true"/>
+			<SubField name="CurrencyCode" required="true"/>
+			<SubField name="Amount" required="true"/>
+		</Field>
+		<Field format=":4!c//15d" name="90K">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="IndexPoints" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Rate">
+		<Field format=":4!c//[s]16d" name="92A">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Sign" required="false"/>
+			<SubField name="Rate" required="true"/>
+		</Field>
+		<Field format=":4!c//3!a/3!a/15d" name="92B">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="FirstCurrencyCode" required="true"/>
+			<SubField name="SecondCurrencyCode" required="true"/>
+			<SubField name="Rate" required="true"/>
+		</Field>
+		<Field format=":4!c/[4!c[4c]]/24z" name="92C">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DataSourceScheme" required="false"/>
+			<SubField name="RateName" required="true"/>
+		</Field>
+		<Field format=":4!c//15d/15d" name="92D">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Rate" required="true"/>
+			<SubField name="Rate" required="true"/>
+		</Field>
+		<Field format=":4!c/[4!c[4c]]/4!c/[s]15d[/4!c]" name="92E">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DataSourceScheme" required="false"/>
+			<SubField name="RateType" required="true"/>
+			<SubField name="Sign" required="false"/>
+			<SubField name="Rate" required="true"/>
+			<SubField name="RateStatus" required="false"/>
+		</Field>
+		<Field format=":4!c//3!a15d" name="92F">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="CurrencyCode" required="true"/>
+			<SubField name="Amount" required="true"/>
+		</Field>
+		<Field format=":4!c/[4!c[4c]]/24z/[s]15d" name="92G">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DataSourceScheme" required="false"/>
+			<SubField name="RateName" required="true"/>
+			<SubField name="Sign" required="false"/>
+			<SubField name="Rate" required="true"/>
+		</Field>
+		<Field format=":4!c//[s]17d" name="92H">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Sign" required="false"/>
+			<SubField name="Rate" required="true"/>
+		</Field>
+		<Field format=":4!c//12d" name="92I">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Rate" required="true"/>
+		</Field>
+		<Field format=":4!c//4!c" name="92K">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Rate" required="true"/>
+		</Field>
+		<Field format=":4!c/[4!c[4c]]/4!c/3!a15d[/4!c]" name="92J">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DataSourceScheme" required="false"/>			
+			<SubField name="RateTypeCode" required="true"/>
+			<SubField name="CurrencyCode" required="true"/>
+			<SubField name="Amount" required="true"/>
+			<SubField name="RateStatus" required="false"/>
+		</Field>
+		<Field format=":4!c//3!a15d/3!a15d" name="92L">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="FirstCurrencyCode" required="true"/>
+			<SubField name="Amount" required="true"/>
+			<SubField name="SecondCurrencyCode" required="true"/>
+			<SubField name="Amount" required="true"/>
+		</Field>
+		<Field format=":4!c//3!a15d/15d" name="92M">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="CurrencyCode" required="true"/>
+			<SubField name="Amount" required="true"/>
+			<SubField name="Quantity" required="true"/>
+		</Field>
+		<Field format=":4!c//15d/3!a15d" name="92N">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Quantity" required="true"/>
+			<SubField name="CurrencyCode" required="true"/>
+			<SubField name="Amount" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Balance">
+		<Field format=":4!c/[4!c[4c]]/4!c" name="93A">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DataSourceScheme" required="false"/>
+			<SubField name="Sub-BalanceTypeCode" required="true"/>
+		</Field>
+		<Field format=":4!c/[4!c[4c]]/4!c/[s]16d" name="93B">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DataSourceScheme" required="false"/>
+			<SubField name="QuantityTypeCode" required="true"/>
+			<SubField name="Sign" required="false"/>
+			<SubField name="Balance" required="true"/>
+		</Field>
+		<Field format=":4!c//4!c/4!c/[s]16d" name="93C">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="QuantityTypeCode" required="true"/>
+			<SubField name="BalanceTypeCode" required="true"/>
+			<SubField name="Sign" required="false"/>
+			<SubField name="Balance" required="true"/>
+		</Field>
+		<Field format=":4!c/[4!c[4c]]/[s]15d" name="93D">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DataSourceScheme" required="false"/>
+			<SubField name="Sign" required="false"/>
+			<SubField name="Balance" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Place">
+		<Field format=":4!c/[4!c[4c]]/4!c[/30z]" name="94B">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DataSourceScheme" required="false"/>
+			<SubField name="PlaceCode" required="true"/>
+			<SubField name="Narrative" required="false"/>
+		</Field>
+		<Field format=":4!c//2!a" name="94C">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Country" required="true"/>
+		</Field>
+		<Field format=":4!c//[2!a]/35z" name="94D">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Country" required="false"/>
+			<SubField name="Region" required="true"/>
+		</Field>
+		<Field format=":4!c//4!c/4!a2!a2!c[3!c]" name="94F">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Place" required="true"/>
+			<SubField name="BankIdentifierCode" required="true"/>
+		</Field>
+		<Field format=":4!c//2*35z" name="94G">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Address" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Party">
+		<Field format=":4!c//2!a" name="95C">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="CountryCode" required="true"/>
+		</Field>
+		<Field format=":4!c//4!a2!a2!c[3!c]" name="95P">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="BankIdentifierCode" required="true"/>
+		</Field>
+		<Field format=":4!c//4*35z" name="95Q">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="NameandAddress" required="true"/>
+		</Field>
+		<Field format=":4!c/8c/34z" name="95R">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DataSourceScheme" required="true"/>
+			<SubField name="ProprietaryCode" required="true"/>
+		</Field>
+		<Field format=":4!c/[4!c[4c]]/4!c/2!a/30z" name="95S">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DataSourceScheme" required="false"/>
+			<SubField name="TypeofIdentification" required="true"/>
+			<SubField name="Country" required="true"/>
+			<SubField name="AlternateID" required="true"/>
+		</Field>
+		<Field format=":4!c//2*35z" name="95T">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Name" required="true"/>
+		</Field>
+		<Field format=":4!c//3*35z" name="95U">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Name" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Account">
+		<Field format=":4!c//35z" name="97A">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="AccountNumber" required="true"/>
+		</Field>
+		<Field format=":4!c/[4!c[4c]]/4!c/35z" name="97B">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="DataSourceScheme" required="false"/>
+			<SubField name="AccountTypeCode" required="true"/>
+			<SubField name="AccountNumber" required="true"/>
+		</Field>
+		<Field format=":4!c//4!c" name="97C">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="AccountCode" required="true"/>
+		</Field>
+		<Field format=":4!c//2*35z" name="97D">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="AccountName" required="true"/>
+		</Field>
+		<Field format=":4!c//2*34z" name="97E">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="International Bank Account Number" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Date/Time">
+		<Field format=":4!c//8!n" name="98A">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Date" required="true"/>
+		</Field>
+		<Field format=":4!c/[4!c[4c]]/4!c" name="98B">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Data Source Scheme" required="false"/>
+			<SubField name="Date Code" required="true"/>
+		</Field>
+		<Field format=":4!c//8!n6!n" name="98C">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Date" required="true"/>
+			<SubField name="Time" required="true"/>
+		</Field>
+		<Field format=":4!c//4!c/[s]3!n/4!c" name="98D">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="ReferenceDate" required="true"/>
+			<SubField name="Sign" required="false"/>
+			<SubField name="NumberofDays" required="true"/>
+			<SubField name="DayType" required="true"/>
+		</Field>
+		<Field format=":4!c//8!n6!n[4d][/5c]" name="98E">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Date" required="true"/>
+			<SubField name="Time" required="true"/>
+			<SubField name="Decimals" required="false"/>
+			<SubField name="UTCIndicator" required="false"/>
+		</Field>
+		<Field format=":4!c/[4!c[4c]]/4!c6!n" name="98F">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Data Source Scheme" required="false"/>
+			<SubField name="Date Code" required="true"/>
+			<SubField name="Time" required="true"/>
+		</Field>
+	</Fields>
+	<Fields BusinessClass="Number Count">
+		<Field format=":4!c//[s]3!n" name="99A">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Sign" required="false"/>
+			<SubField name="Number" required="true"/>
+		</Field>
+		<Field format=":4!c//3!n" name="99B">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Number" required="true"/>
+		</Field>
+		<Field format=":4!c//4!n" name="99C">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Number" required="true"/>
+		</Field>
+		<Field format=":4!c//8n" name="99D">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Number" required="true"/>
+		</Field>
+		<Field format=":4!c//3n" name="99E">
+			<SubField name="Qualifier" required="true"/>
+			<SubField name="Number" required="true"/>
+		</Field>
+	</Fields>
+	<Message type="MT564" name="Corporate Action Notification">
+		<Record mandatory="true" name="GENL" repeating="false">
+			<Field name="20C">
+				<Qualifier mandatory="true" name="CORP" repeating="false"/>
+				<Qualifier mandatory="true" name="SEME" repeating="false"/>
+			</Field>
+			<Field name="23G">
+				<Unqualified mandatory="true"/>
+			</Field>
+			<Field name="22F">
+				<Qualifier mandatory="true" name="CAEV" repeating="false"/>
+				<Qualifier mandatory="true" name="CAMV" repeating="false"/>
+				<Qualifier mandatory="false" name="CAEP" repeating="false"/>
+			</Field>
+			<Field name="25D">
+				<Qualifier mandatory="true" name="PROC" repeating="false"/>
+			</Field>
+			<FieldChoice name="98a">
+				<Qualifier mandatory="false" name="PREP" options="A,C" repeating="false"/>
+				<Field name="98A"/>
+				<Field name="98C"/>
+			</FieldChoice>
+			<Record mandatory="false" name="LINK" repeating="true">
+				<Field name="22F">
+					<Qualifier mandatory="false" name="LINK" repeating="false"/>
+				</Field>
+				<FieldChoice name="13a">
+					<Qualifier mandatory="false" name="LINK" options="A,B" repeating="false"/>
+				    <Field name="13A"/>
+				    <Field name="13B"/>
+				</FieldChoice>
+				<Field name="20C">
+					<Qualifier mandatory="true" name="CORP" repeating="false"/>
+					<Qualifier mandatory="false" name="PREV" repeating="false"/>
+					<Qualifier mandatory="false" name="RELA" repeating="false"/>
+				</Field>
+			</Record>
+		</Record>
+		<Record mandatory="true" name="USECU" repeating="false">
+			<Field name="35B">
+				<Unqualified mandatory="true"/>
+			</Field>
+			<Record mandatory="false" name="FIA" repeating="false">
+				<Field name="94B">
+					<Qualifier mandatory="false" name="PLIS" repeating="false"/>
+				</Field>
+				<Field name="22F">
+					<Qualifier mandatory="false" name="MICO" repeating="false"/>
+				</Field>
+				<Field name="11A">
+					<Qualifier mandatory="false" name="DENO" repeating="false"/>
+				</Field>
+				<Field name="98A">
+					<Qualifier mandatory="false" name="COUP" repeating="false"/>
+					<Qualifier mandatory="false" name="EXPI" repeating="false"/>
+					<Qualifier mandatory="false" name="FRNR" repeating="false"/>
+					<Qualifier mandatory="false" name="MATU" repeating="false"/>
+					<Qualifier mandatory="false" name="ISSU" repeating="false"/>
+					<Qualifier mandatory="false" name="CALD" repeating="false"/>
+					<Qualifier mandatory="false" name="PUTT" repeating="false"/>
+					<Qualifier mandatory="false" name="DDTE" repeating="false"/>
+					<Qualifier mandatory="false" name="CONV" repeating="false"/>
+				</Field>
+				<Field name="92A">
+					<Qualifier mandatory="false" name="PRFC" repeating="false"/>
+					<Qualifier mandatory="false" name="CUFC" repeating="false"/>
+					<Qualifier mandatory="false" name="NWFC" repeating="false"/>
+					<Qualifier mandatory="false" name="INTR" repeating="false"/>
+					<Qualifier mandatory="false" name="NXRT" repeating="false"/>
+				</Field>
+				<Field name="36B">
+					<Qualifier mandatory="false" name="MINO" repeating="false"/>
+					<Qualifier mandatory="false" name="MIEX" repeating="false"/>
+					<Qualifier mandatory="false" name="MILT" repeating="false"/>
+					<Qualifier mandatory="false" name="SIZE" repeating="false"/>
+					<Qualifier mandatory="false" name="ORGV" repeating="false"/>
+				</Field>
+				<FieldChoice name="12a">
+					<Qualifier mandatory="false" name="CLAS" options="A,C" repeating="false"/>
+					<Field name="12A"/>
+					<Field name="12C"/>
+				</FieldChoice>
+			</Record>
+			<Record mandatory="true" name="ACCTINFO" repeating="true">
+				<FieldChoice name="97a">
+					<Qualifier mandatory="true" name="SAFE" options="A,C" repeating="false"/>
+					<Field name="97A"/>
+					<Field name="97C"/>
+				</FieldChoice>
+                		<FieldChoice name="94a">
+                    			<Qualifier mandatory="false" name="SAFE" options="B,C,F" repeating="false"/>
+                    			<Field name="94B"/>
+                    			<Field name="94C"/>
+                    			<Field name="94F"/>
+				</FieldChoice>
+				<FieldChoice name="93a">
+					<Qualifier mandatory="false" name="ELIG" options="B" repeating="false"/>
+					<Qualifier mandatory="false" name="BLOK" options="B,C" repeating="false"/>
+					<Qualifier mandatory="false" name="BORR" options="B,C" repeating="false"/>
+					<Qualifier mandatory="false" name="COLI" options="B,C" repeating="false"/>
+					<Qualifier mandatory="false" name="COLO" options="B,C" repeating="false"/>
+					<Qualifier mandatory="false" name="LOAN" options="B,C" repeating="false"/>
+					<Qualifier mandatory="false" name="PEND" options="B,C" repeating="true"/>
+					<Qualifier mandatory="false" name="PENR" options="B,C" repeating="true"/>
+					<Qualifier mandatory="false" name="REGO" options="B,C" repeating="false"/>
+					<Qualifier mandatory="false" name="SETT" options="B,C" repeating="false"/>
+					<Qualifier mandatory="false" name="SPOS" options="B,C" repeating="false"/>
+					<Qualifier mandatory="false" name="TRAD" options="B,C" repeating="false"/>
+					<Qualifier mandatory="false" name="TRAN" options="B,C" repeating="false"/>
+					<Qualifier mandatory="false" name="NOMI" options="B,C" repeating="false"/>
+					<Field name="93B"/>
+					<Field name="93C"/>
+				</FieldChoice>
+			</Record>
+		</Record>
+		<Record mandatory="false" name="INTSEC" repeating="false">
+			<Field name="35B">
+				<Unqualified mandatory="true"/>
+			</Field>
+			<FieldChoice name="36a">
+				<Qualifier mandatory="false" name="QINT" options="B,E" repeating="false"/>
+			    	<Field name="36B"/>
+				<Field name="36E"/>
+			</FieldChoice>
+            		<FieldChoice name="93a">
+				<Qualifier mandatory="false" name="UNBA" options="B,C" repeating="false"/>
+				<Qualifier mandatory="false" name="INBA" options="B,C" repeating="false"/>
+                    		<Field name="93B"/>
+				<Field name="93C"/>
+            		</FieldChoice>
+			<Field name="22F">
+				<Qualifier mandatory="false" name="DISF" repeating="false"/>
+				<Qualifier mandatory="false" name="SELL" repeating="false"/>
+			</Field>
+			<Field name="92D">
+				<Qualifier mandatory="false" name="RTUN" repeating="false"/>
+				<Qualifier mandatory="false" name="ADSR" repeating="false"/>
+			</Field>
+			<Field name="90B">
+				<Qualifier mandatory="false" name="INDC" repeating="false"/>
+				<Qualifier mandatory="false" name="MRKT" repeating="false"/>
+			</Field>
+			<FieldChoice name="98a">
+				<Qualifier mandatory="true" name="EXPI" options="A,B" repeating="false"/>
+				<Qualifier mandatory="true" name="POST" options="A,B" repeating="false"/>
+				<Field name="98A"/>
+				<Field name="98B"/>
+			</FieldChoice>
+			<FieldChoice name="69a">
+				<Qualifier mandatory="false" name="TRDP" options="A,B,C,D,E,F" repeating="false"/>
+				<Field name="69A"/>
+				<Field name="69B"/>
+				<Field name="69C"/>
+				<Field name="69D"/>
+				<Field name="69E"/>
+				<Field name="69F"/>
+			</FieldChoice>
+		</Record>
+		<Record mandatory="false" name="CADETL" repeating="false">
+			<Field name="22F">
+				<Qualifier mandatory="false" name="DIVI" repeating="false"/>
+				<Qualifier mandatory="false" name="CONV" repeating="false"/>
+				<Qualifier mandatory="false" name="DITY" repeating="false"/>
+				<Qualifier mandatory="false" name="OFFE" repeating="false"/>
+				<Qualifier mandatory="false" name="SELL" repeating="false"/>
+				<Qualifier mandatory="false" name="TAKO" repeating="false"/>
+				<Qualifier mandatory="false" name="ADDB" repeating="false"/>
+			</Field>
+			<Field name="70E">
+				<Qualifier mandatory="false" name="ADTX" repeating="false"/>
+				<Qualifier mandatory="false" name="TXNR" repeating="false"/>
+				<Qualifier mandatory="false" name="INCO" repeating="true"/>
+				<Qualifier mandatory="false" name="COMP" repeating="true"/>
+			</Field>
+			<FieldChoice name="98a">
+				<Qualifier mandatory="false" name="ANOU" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="AVAL" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="BLOK" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="CERT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="CONV" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="COUC" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="XDTE" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="DIVR" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="EARL" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="EFFD" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="EXPI" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="EXRQ" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="FDDT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="FXDT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="MKDT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="PAYD" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="PODT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="PPDT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="PROD" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="REDM" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="REGI" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="RESU" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="SPLT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="SUBS" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="QUOT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="MEET" options="A,B,C,D,E" repeating="false"/>
+				<Qualifier mandatory="false" name="RDDT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="RDTE" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="TRDT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="TSDT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="EQUL" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="OAPD" options="A,B,C" repeating="false"/>
+				<Qualifier mandatory="false" name="SXDT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="GUPA" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="ECPD" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="LAPD" options="A,B,C" repeating="false"/>
+				<Qualifier mandatory="false" name="MCTD" options="A,B,C,E" repeating="false"/>
+				<Qualifier mandatory="false" name="TPDT" options="A,B,C" repeating="false"/>
+				<Qualifier mandatory="false" name="ETPD" options="A,B,C" repeating="false"/>
+			<!-- 	<Qualifier mandatory="false" name="MET2" options="A,B,C,E" repeating="false"/>
+				<Qualifier mandatory="false" name="MET3" options="A,B,C,E" repeating="false"/> -->
+				<Field name="98A"/>
+				<Field name="98B"/>
+				<Field name="98C"/>
+				<Field name="98D"/>
+				<Field name="98E"/>
+			</FieldChoice>
+			<FieldChoice name="69a">
+				<Qualifier mandatory="false" name="CONV" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="IACC" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="OFFR" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="PRIC" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="REPL" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="REVO" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="INDP" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="PARL" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="INPE" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="CSPD" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="BLOK" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="CLCP" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="DSWN" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="DSDE" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="DSBT" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="DSDA" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="DSWA" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="DSPL" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="DSSE" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="DSWS" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="BOCL" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Field name="69A"/>
+				<Field name="69B"/>
+				<Field name="69C"/>
+				<Field name="69D"/>
+				<Field name="69E"/>
+				<Field name="69F"/>
+				<Field name="69J"/>
+			</FieldChoice>
+			<FieldChoice name="92a">
+				<Qualifier mandatory="false" name="EXCH" options="A,B,K" repeating="false"/>
+				<Qualifier mandatory="false" name="RDIS" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="ADSR" options="D,K" repeating="false"/>
+				<Qualifier mandatory="false" name="ADEX" options="D,K" repeating="false"/>
+				<Qualifier mandatory="false" name="NEWO" options="D,K" repeating="false"/>
+				<Qualifier mandatory="false" name="NWRT" options="D,K" repeating="false"/>
+				<Qualifier mandatory="false" name="NETT" options="A,E,F,J,K" repeating="false"/>
+				<Qualifier mandatory="false" name="GRSS" options="A,E,F,J,K" repeating="false"/>
+				<Qualifier mandatory="false" name="TAXC" options="A,E,F,J,K" repeating="false"/>
+				<Qualifier mandatory="false" name="NRES" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="TAXR" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="OFFR" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="OSUB" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="WITF" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="WITL" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="LADT" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="LIDT" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="LOTE" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="LYDT" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="CHAR" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="FLFR" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="INTR" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="ATAX" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="INDF" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="REDM" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="BIDI" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="FDIV" options="F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="FMRD" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="INCE" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="PDIV" options="F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="SOFE" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="TXIN" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="TXPR" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="PROR" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="PTSC" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="FISC" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="NWFC" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="PRFC" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="RINR" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="RSPR" options="A,K" repeating="false"/>
+				<Field name="92A"/>
+		                <Field name="92B"/>
+				<Field name="92D"/>
+				<Field name="92E"/>
+				<Field name="92F"/>
+		                <Field name="92J"/>
+		                <Field name="92K"/>
+			</FieldChoice>
+			<FieldChoice name="90a">
+				<Qualifier mandatory="false" name="INDC" options="A,B,E" repeating="false"/>
+				<Qualifier mandatory="false" name="MRKT" options="A,B,E" repeating="false"/>
+				<Qualifier mandatory="false" name="EXER" options="A,B,E,K" repeating="false"/>
+				<Qualifier mandatory="false" name="ISSU" options="A,B,E" repeating="false"/>
+				<Qualifier mandatory="false" name="OFFR" options="A,B,E" repeating="false"/>
+				<Qualifier mandatory="false" name="PRPP" options="A,B,E" repeating="false"/>
+				<Qualifier mandatory="false" name="REIN" options="A,B,E" repeating="false"/>
+				<Qualifier mandatory="false" name="REDM" options="A,B,E" repeating="false"/>
+				<Qualifier mandatory="false" name="SUPR" options="A,B,E" repeating="false"/>
+				<Qualifier mandatory="false" name="CINL" options="A,B,E" repeating="false"/>
+                <Qualifier mandatory="false" name="MAXP" options="A,B,E" repeating="false"/>
+				<Qualifier mandatory="false" name="MINP" options="A,B,E" repeating="false"/>
+				<Field name="90A"/>
+				<Field name="90B"/>
+		                <Field name="90E"/>
+		                <Field name="90K"/>
+			</FieldChoice>
+           		 <FieldChoice name="36a">
+                <Qualifier mandatory="false" name="BOLQ" options="B,C" repeating="false"/>
+				<Qualifier mandatory="false" name="MIEX" options="B" repeating="false"/>
+				<Qualifier mandatory="false" name="MILT" options="B" repeating="false"/>
+				<Qualifier mandatory="false" name="QTSO" options="B,C" repeating="false"/>
+				<Qualifier mandatory="false" name="FOLQ" options="B,C" repeating="false"/>
+				<Qualifier mandatory="false" name="NBLT" options="B" repeating="false"/>
+				<Qualifier mandatory="false" name="NEWD" options="B" repeating="false"/>
+				<Qualifier mandatory="false" name="BASE" options="B" repeating="false"/>
+				<Qualifier mandatory="false" name="INCR" options="B" repeating="false"/>
+				<Qualifier mandatory="false" name="MQSO" options="B,C" repeating="false"/>
+				<Field name="36B"/>
+				<Field name="36C"/>
+            		</FieldChoice>
+			<FieldChoice name="13a">
+                		<Qualifier mandatory="false" name="COUP" options="A,B" repeating="false"/>
+				<Field name="13A"/>
+				<Field name="13B"/>
+			</FieldChoice>
+			<Field name="17B">
+                <Qualifier mandatory="false" name="CERT" repeating="false"/>
+				<Qualifier mandatory="false" name="RCHG" repeating="false"/>
+				<Qualifier mandatory="false" name="COMP" repeating="false"/>
+				<Qualifier mandatory="false" name="ACIN" repeating="false"/>
+			</Field>
+		</Record>
+		<Record mandatory="false" name="CAOPTN" repeating="true">
+			<Field name="13A">
+				<Qualifier mandatory="true" name="CAON" repeating="false"/>
+			</Field>
+			<Field name="22F">
+				<Qualifier mandatory="true" name="CAOP" repeating="false"/>
+				<Qualifier mandatory="false" name="DISF" repeating="false"/>
+			</Field>
+			<Field name="11A">
+				<Qualifier mandatory="false" name="OPTN" repeating="false"/>
+			</Field>
+			<Field name="17B">
+				<Qualifier mandatory="true" name="DFLT" repeating="false"/>
+				<Qualifier mandatory="false" name="STIN" repeating="false"/>
+				<Qualifier mandatory="true" name="RCHG" repeating="false"/>
+				<Qualifier mandatory="false" name="CERT" repeating="false"/>
+			</Field>
+			<Field name="35B">
+				<Unqualified mandatory="false"/>
+			</Field>
+			<Field name="70E">
+				<Qualifier mandatory="false" name="ADTX" repeating="false"/>
+				<Qualifier mandatory="false" name="TXNR" repeating="false"/>
+				<Qualifier mandatory="false" name="INCO" repeating="true"/>
+				<Qualifier mandatory="false" name="COMP" repeating="true"/>
+			</Field>
+			<FieldChoice name="98a">
+				<Qualifier mandatory="false" name="ANOU" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="AVAL" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="BLOK" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="CERT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="CONV" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="COUC" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="XDTE" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="DIVR" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="EARL" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="EFFD" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="EXPI" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="EXRQ" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="FDDT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="FXDT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="MKDT" options="A,B,C,D,E" repeating="false"/>
+				<Qualifier mandatory="false" name="PAYD" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="PODT" options="A,B,C,D,E" repeating="false"/>
+				<Qualifier mandatory="false" name="PPDT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="PROD" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="REDM" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="REGI" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="RESU" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="SPLT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="SUBS" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="QUOT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="MEET" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="RDDT" options="A,B,C,D,E,F" repeating="false"/>
+				<Qualifier mandatory="false" name="RDTE" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="TRDT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="TSDT" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="EQUL" options="A,B,C,D" repeating="false"/>
+				<Qualifier mandatory="false" name="CVPR" options="A,B,C,E" repeating="false"/>
+				<Qualifier mandatory="false" name="DVCP" options="A,B,C" repeating="false"/>
+				<Qualifier mandatory="false" name="EARD" options="A,B,C,E" repeating="false"/>
+				<Qualifier mandatory="false" name="PLDT" options="A,B,C,E" repeating="false"/>
+				<Field name="98A"/>
+				<Field name="98B"/>
+				<Field name="98C"/>
+				<Field name="98D"/>
+				<Field name="98E"/>
+				<Field name="98F"/>
+			</FieldChoice>
+			<FieldChoice name="69a">
+				<Qualifier mandatory="false" name="CONV" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="IACC" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="OFFR" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="PRIC" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="REPL" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="REVO" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="INDP" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="TRDP" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="SEAD" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="PARL" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="PAWL" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="SUSP" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="AREV" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Qualifier mandatory="false" name="DSWO" options="A,B,C,D,E,F,J" repeating="false"/>
+				<Field name="69A"/>
+				<Field name="69B"/>
+				<Field name="69C"/>
+				<Field name="69D"/>
+				<Field name="69E"/>
+				<Field name="69F"/>
+				<Field name="69J"/>
+			</FieldChoice>
+			<FieldChoice name="92a">
+				<Qualifier mandatory="false" name="EXCH" options="A,B,K" repeating="false"/>
+				<Qualifier mandatory="false" name="RDIS" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="ADSR" options="D,K" repeating="false"/>
+				<Qualifier mandatory="false" name="ADEX" options="D,K" repeating="false"/>
+				<Qualifier mandatory="false" name="NEWO" options="D,K" repeating="false"/>
+				<Qualifier mandatory="false" name="NWRT" options="D,K" repeating="false"/>
+				<Qualifier mandatory="false" name="NETT" options="A,E,F,J,K" repeating="false"/>
+				<Qualifier mandatory="false" name="GRSS" options="A,E,F,J,K" repeating="false"/>
+				<Qualifier mandatory="false" name="TAXC" options="A,E,F,J,K" repeating="false"/>
+				<Qualifier mandatory="false" name="NRES" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="TAXR" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="OSUB" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="LADT" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="LIDT" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="LOTE" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="LYDT" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="WITF" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="WITL" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="CHAR" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="FLFR" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="INTR" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="ATAX" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="INDF" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="BIDI" options="F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="OFFR" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="FDIV" options="F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="FMRD" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="INCE" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="OVEP" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="PDIV" options="F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="SOFE" options="A,K,M" repeating="false"/>
+				<Qualifier mandatory="false" name="TXIN" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="TXPR" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="PROR" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="PTSC" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="FISC" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="INTP" options="A,F,J,K" repeating="false"/>
+				<Qualifier mandatory="false" name="TAXE" options="J" repeating="false"/>
+				<Qualifier mandatory="false" name="INDX" options="A,F,K" repeating="false"/>
+				<Qualifier mandatory="false" name="RATE" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="TXRC" options="A,K" repeating="false"/>
+				<Qualifier mandatory="false" name="ESOF" options="A,K,M" repeating="false"/>
+				<Field name="92A"/>
+				<Field name="92B"/>	
+				<Field name="92D"/>
+				<Field name="92E"/>
+				<Field name="92F"/>
+				<Field name="92J"/>
+				<Field name="92K"/>
+				<Field name="92M"/>
+			</FieldChoice>
+			<FieldChoice name="90a">
+				<Qualifier mandatory="false" name="INDC" options="A,B,E" repeating="false"/>
+				<Qualifier mandatory="false" name="MRKT" options="A,B,E" repeating="false"/>
+				<Qualifier mandatory="false" name="EXER" options="A,B,E,K" repeating="false"/>
+				<Qualifier mandatory="false" name="ISSU" options="A,B,E" repeating="false"/>
+				<Qualifier mandatory="false" name="OFFR" options="A,B,E" repeating="false"/>
+				<Qualifier mandatory="false" name="PRPP" options="A,B,E" repeating="false"/>
+				<Qualifier mandatory="false" name="REIN" options="A,B,E" repeating="false"/>
+				<Qualifier mandatory="false" name="REDM" options="A,B,E" repeating="false"/>
+				<Qualifier mandatory="false" name="SUPR" options="A,B,E" repeating="false"/>
+				<Qualifier mandatory="false" name="CINL" options="A,B,E" repeating="false"/>
+				<Field name="90A"/>
+				<Field name="90B"/>
+				<Field name="90E"/>
+				<Field name="90K"/>
+			</FieldChoice>
+			<FieldChoice name="36a">
+					<Qualifier mandatory="false" name="MIEX" options="B" repeating="false"/>
+					<Qualifier mandatory="false" name="MILT" options="B" repeating="false"/>
+					<Qualifier mandatory="false" name="OVEP" options="B" repeating="false"/>
+					<Qualifier mandatory="false" name="NBLT" options="B" repeating="false"/>
+					<Qualifier mandatory="false" name="NEWD" options="B" repeating="false"/>
+					<Qualifier mandatory="false" name="MAEX" options="B" repeating="false"/>
+					<Qualifier mandatory="false" name="BOLQ" options="B,C" repeating="false"/>
+					<Qualifier mandatory="false" name="FOLQ" options="B,C" repeating="false"/>
+					<Field name="36B"/>
+					<Field name="36C"/>
+			</FieldChoice>
+			<Field name="94C">
+					<Qualifier mandatory="false" name="NDOM" repeating="true"/>
+			</Field>
+			<Record mandatory="false" name="SECMOVE" repeating="true">
+				<Field name="22H">
+					<Qualifier mandatory="true" name="CRDB" repeating="false"/>
+				</Field>
+				<Field name="35B">
+					<Unqualified mandatory="true"/>
+				</Field>
+				<Field name="36B">
+					<Qualifier mandatory="false" name="PSTA" repeating="false"/>
+				</Field>
+				<Field name="22F">
+					<Qualifier mandatory="false" name="DISF" repeating="false"/>
+				</Field>
+				<Field name="11A">
+
+					<Qualifier mandatory="false" name="OPTN" repeating="false"/>
+				</Field>
+				<FieldChoice name="69a">
+					<Qualifier mandatory="false" name="CONV" options="A,B,C,D,E,F,J" repeating="false"/>
+					<Qualifier mandatory="false" name="IACC" options="A,B,C,D,E,F,J" repeating="false"/>
+					<Qualifier mandatory="false" name="OFFR" options="A,B,C,D,E,F,J" repeating="false"/>
+					<Qualifier mandatory="false" name="PRIC" options="A,B,C,D,E,F,J" repeating="false"/>
+					<Qualifier mandatory="false" name="REVO" options="A,B,C,D,E,F,J" repeating="false"/>
+					<Qualifier mandatory="false" name="INDP" options="A,B,C,D,E,F,J" repeating="false"/>
+					<Qualifier mandatory="false" name="TRDP" options="A,B,C,D,E,F,J" repeating="false"/>
+					<Field name="69A"/>
+					<Field name="69B"/>
+					<Field name="69C"/>
+					<Field name="69D"/>
+					<Field name="69E"/>
+					<Field name="69F"/>
+					<Field name="69J"/>
+				</FieldChoice>
+				<FieldChoice name="90a">
+					<Qualifier mandatory="false" name="INDC" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="MRKT" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="EXER" options="A,B,E,K" repeating="false"/>
+					<Qualifier mandatory="false" name="ISSU" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="OFFR" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="PRPP" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="REIN" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="REDM" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="SUPR" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="CINL" options="A,B,E" repeating="false"/>
+					<Field name="90A"/>
+					<Field name="90B"/>
+					<Field name="90E"/>
+					<Field name="90K"/>
+				</FieldChoice>
+				<FieldChoice name="92a">
+					<Qualifier mandatory="false" name="ADEX" options="D,K,L" repeating="false"/>
+					<Qualifier mandatory="false" name="NEWO" options="D,K,L,M,N" repeating="false"/>
+					<Qualifier mandatory="false" name="EXCH" options="A,D,K" repeating="false"/>
+					<Qualifier mandatory="false" name="RDIS" options="A,K" repeating="false"/>
+					<Qualifier mandatory="false" name="ADSR" options="D,K,L" repeating="false"/>
+					<Qualifier mandatory="false" name="NWRT" options="D,K,L,M,N" repeating="false"/>
+					<Qualifier mandatory="false" name="NETT" options="A,E,F,J,K" repeating="false"/>
+					<Qualifier mandatory="false" name="GRSS" options="A,E,F,J,K" repeating="false"/>
+					<Qualifier mandatory="false" name="TAXC" options="A,E,F,J,K" repeating="false"/>
+					<Qualifier mandatory="false" name="NRES" options="A,F,K" repeating="false"/>
+					<Qualifier mandatory="false" name="TAXR" options="A,K" repeating="false"/>
+					<Qualifier mandatory="false" name="OSUB" options="A,F,K" repeating="false"/>
+					<Qualifier mandatory="false" name="LADT" options="A,F,K" repeating="false"/>
+					<Qualifier mandatory="false" name="LIDT" options="A,F,K" repeating="false"/>
+					<Qualifier mandatory="false" name="LOTE" options="A,F,K" repeating="false"/>
+					<Qualifier mandatory="false" name="LYDT" options="A,F,K" repeating="false"/>
+					<Qualifier mandatory="false" name="WITF" options="A,F,K" repeating="false"/>
+					<Qualifier mandatory="false" name="WITL" options="A,F,K" repeating="false"/>
+					<Qualifier mandatory="false" name="CHAR" options="A,F,K" repeating="false"/>
+					<Qualifier mandatory="false" name="FLFR" options="A,F,K" repeating="false"/>
+					<Qualifier mandatory="false" name="INTR" options="A,F,K" repeating="false"/>
+					<Qualifier mandatory="false" name="ATAX" options="A,F,K" repeating="false"/>
+					<Qualifier mandatory="false" name="INDF" options="A,F,K" repeating="false"/>
+					<Qualifier mandatory="false" name="OFFR" options="A,K" repeating="false"/>
+					<Qualifier mandatory="false" name="FDIV" options="F,K" repeating="false"/>
+					<Qualifier mandatory="false" name="FMRD" options="A,K" repeating="false"/>
+					<Qualifier mandatory="false" name="INCE" options="A,K" repeating="false"/>
+					<Qualifier mandatory="false" name="PDIV" options="F,K" repeating="false"/>
+					<Qualifier mandatory="false" name="SOFE" options="A,K" repeating="false"/>
+					<Qualifier mandatory="false" name="TXIN" options="A,K" repeating="false"/>
+					<Qualifier mandatory="false" name="TXPR" options="A,K" repeating="false"/>
+					<Qualifier mandatory="false" name="PROR" options="A,K" repeating="false"/>
+					<Qualifier mandatory="false" name="PTSC" options="A,K" repeating="false"/>
+					<Qualifier mandatory="false" name="FISC" options="A,K" repeating="false"/>
+					<Qualifier mandatory="false" name="TRAT" options="A" repeating="false"/>
+					<Field name="92A"/>
+					<Field name="92D"/>
+					<Field name="92E"/>
+					<Field name="92F"/>
+					<Field name="92J"/>
+					<Field name="92K"/>
+					<Field name="92L"/>
+					<Field name="92M"/>
+					<Field name="92N"/>
+				</FieldChoice>
+				<FieldChoice name="98a">
+					<Qualifier mandatory="true" name="PAYD" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="ANOU" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="AVAL" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="BLOK" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="CERT" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="CONV" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="COUC" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="XDTE" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="DIVR" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="EARL" options="A,B,C,D,E" repeating="false"/>
+					<Qualifier mandatory="false" name="EFFD" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="EXPI" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="EXRQ" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="FDDT" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="FXDT" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="MKDT" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="PODT" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="PPDT" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="PROD" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="REDM" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="REGI" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="RESU" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="SPLT" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="SUBS" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="QUOT" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="MEET" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="RDTE" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="TRDT" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="TSDT" options="A,B,C,D" repeating="false"/>
+					<Qualifier mandatory="false" name="EQUL" options="A,B,C,D" repeating="false"/>
+					<Field name="98A"/>
+					<Field name="98B"/>
+					<Field name="98C"/>
+					<Field name="98D"/>
+					<Field name="98E"/>
+				</FieldChoice>
+				<Record mandatory="false" name="FIA" repeating="false">
+					<Field name="94B">
+						<Qualifier mandatory="false" name="PLIS" repeating="false"/>
+					</Field>
+					<Field name="22F">
+						<Qualifier mandatory="false" name="MICO" repeating="false"/>
+					</Field>
+					<Field name="11A">
+						<Qualifier mandatory="false" name="DENO" repeating="false"/>
+					</Field>
+					<Field name="98A">
+						<Qualifier mandatory="false" name="COUP" repeating="false"/>
+						<Qualifier mandatory="false" name="EXPI" repeating="false"/>
+						<Qualifier mandatory="false" name="FRNR" repeating="false"/>
+						<Qualifier mandatory="false" name="MATU" repeating="false"/>
+						<Qualifier mandatory="false" name="ISSU" repeating="false"/>
+						<Qualifier mandatory="false" name="CALD" repeating="false"/>
+						<Qualifier mandatory="false" name="PUTT" repeating="false"/>
+						<Qualifier mandatory="false" name="DDTE" repeating="false"/>
+						<Qualifier mandatory="false" name="CONV" repeating="false"/>
+					</Field>
+					<FieldChoice name="90a">
+						<Qualifier mandatory="false" name="ISSU" options="A,B,E" repeating="false"/>
+						<Field name="90A"/>
+						<Field name="90B"/>
+						<Field name="90E"/>
+					</FieldChoice>
+					<Field name="92A">
+						<Qualifier mandatory="false" name="PRFC" repeating="false"/>
+						<Qualifier mandatory="false" name="CUFC" repeating="false"/>
+						<Qualifier mandatory="false" name="NWFC" repeating="false"/>
+						<Qualifier mandatory="false" name="INTR" repeating="false"/>
+						<Qualifier mandatory="false" name="NXRT" repeating="false"/>
+					</Field>
+					<Field name="36B">
+						<Qualifier mandatory="false" name="MINO" repeating="false"/>
+						<Qualifier mandatory="false" name="MIEX" repeating="false"/>
+						<Qualifier mandatory="false" name="MILT" repeating="false"/>
+						<Qualifier mandatory="false" name="SIZE" repeating="false"/>
+						<Qualifier mandatory="false" name="ORGV" repeating="false"/>
+					</Field>
+					<FieldChoice name="12a">
+						<Qualifier mandatory="false" name="CLAS" options="A,C" repeating="false"/>
+						<Field name="12A"/>
+						<Field name="12C"/>
+					</FieldChoice>
+				</Record>
+			</Record>
+			<Record mandatory="false" name="CASHMOVE" repeating="true">	
+				<FieldChoice name="22a">
+					<Qualifier mandatory="true" name="CRDB" options="H" repeating="false"/>
+					<Qualifier mandatory="false" name="CONT" options="H" repeating="false"/>
+					<Qualifier mandatory="false" name="NELP" options="F" repeating="false"/>
+					<Qualifier mandatory="false" name="ITYP" options="F" repeating="false"/>
+					<Field name="22H"/>
+					<Field name="22F"/>
+				</FieldChoice>
+				<FieldChoice name="97a">
+					<Qualifier mandatory="false" name="CASH" options="A,E" repeating="false"/>
+					<Field name="97A"/>
+					<Field name="97E"/>
+				</FieldChoice>
+				<Field name="19A">
+					<Qualifier mandatory="true" name="ENTL" repeating="false"/>
+					<Qualifier mandatory="false" name="RESU" repeating="false"/>
+					<Qualifier mandatory="false" name="OCMT" repeating="false"/>
+					<Qualifier mandatory="false" name="CAPG" repeating="false"/>
+					<Qualifier mandatory="false" name="INDM" repeating="false"/>
+					<Qualifier mandatory="false" name="CINL" repeating="false"/>
+					<Qualifier mandatory="false" name="CHAR" repeating="false"/>
+					<Qualifier mandatory="false" name="FLFR" repeating="false"/>
+					<Qualifier mandatory="false" name="UNFR" repeating="false"/>
+					<Qualifier mandatory="false" name="TXFR" repeating="false"/>
+					<Qualifier mandatory="false" name="TXDF" repeating="false"/>
+					<Qualifier mandatory="false" name="SOIC" repeating="false"/>
+					<Qualifier mandatory="false" name="GRSS" repeating="false"/>
+					<Qualifier mandatory="false" name="INTR" repeating="false"/>
+					<Qualifier mandatory="false" name="LADT" repeating="false"/>
+					<Qualifier mandatory="false" name="LIDT" repeating="false"/>
+					<Qualifier mandatory="false" name="LOTE" repeating="false"/>
+					<Qualifier mandatory="false" name="LYDT" repeating="false"/>
+					<Qualifier mandatory="false" name="MKTC" repeating="false"/>
+					<Qualifier mandatory="false" name="NETT" repeating="false"/>
+					<Qualifier mandatory="false" name="PRIN" repeating="false"/>
+					<Qualifier mandatory="false" name="REIN" repeating="false"/>
+					<Qualifier mandatory="false" name="TAXC" repeating="false"/>
+					<Qualifier mandatory="false" name="TAXR" repeating="false"/>
+					<Qualifier mandatory="false" name="WITF" repeating="false"/>
+					<Qualifier mandatory="false" name="WITL" repeating="false"/>
+					<Qualifier mandatory="false" name="REDP" repeating="false"/>
+					<Qualifier mandatory="false" name="ATAX" repeating="false"/>
+					<Qualifier mandatory="false" name="FISC" repeating="false"/>
+				</Field>
+				<Field name="92B">
+					<Qualifier mandatory="false" name="EXCH" repeating="false"/>
+				</Field>
+				<FieldChoice name="98a">
+					<Qualifier mandatory="true" name="PAYD" options="A,B,C" repeating="false"/>
+					<Qualifier mandatory="false" name="VALU" options="A,B,C" repeating="false"/>
+					<Qualifier mandatory="false" name="EARL" options="A,B,C,E" repeating="false"/>
+					<Qualifier mandatory="false" name="FXDT" options="A,B,C" repeating="false"/>
+					<Field name="98A"/>
+					<Field name="98B"/>
+					<Field name="98C"/>
+					<Field name="98E"/>
+				</FieldChoice>
+				<FieldChoice name="90a">
+					<Qualifier mandatory="false" name="INDC" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="MRKT" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="EXER" options="A,B,E,K" repeating="false"/>
+					<Qualifier mandatory="false" name="ISSU" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="OFFR" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="PRPP" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="REIN" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="REDM" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="SUPR" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="CINL" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="MAXP" options="A,B,E" repeating="false"/>
+					<Qualifier mandatory="false" name="MINP" options="A,B,E" repeating="false"/>
+					<Field name="90A"/>
+					<Field name="90B"/>
+					<Field name="90E"/>
+					<Field name="90K"/>
+				</FieldChoice>
+			</Record>
+		</Record>
+		<Record mandatory="false" name="ADDINFO" repeating="false">
+			<Field name="70E">
+				<Qualifier mandatory="false" name="DECL" repeating="true"/>
+				<Qualifier mandatory="false" name="ADTX" repeating="true"/>
+				<Qualifier mandatory="false" name="TXNR" repeating="true"/>
+				<Qualifier mandatory="false" name="REGI" repeating="true"/>
+				<Qualifier mandatory="false" name="INCO" repeating="true"/>
+				<Qualifier mandatory="false" name="COMP" repeating="true"/>
+				<Qualifier mandatory="false" name="PACO" repeating="true"/>
+				<Qualifier mandatory="false" name="TAXE" repeating="true"/>
+				<Qualifier mandatory="false" name="DISC" repeating="true"/>
+				<Qualifier mandatory="false" name="BAIN" repeating="true"/>
+			</Field>
+			<FieldChoice name="95a">
+				<Qualifier mandatory="false" name="MEOR" options="P,Q,R" repeating="false"/>
+				<Qualifier mandatory="false" name="MERE" options="P,Q,R" repeating="false"/>
+				<Qualifier mandatory="false" name="ISAG" options="P,Q,R" repeating="true"/>
+				<Qualifier mandatory="false" name="PAYA" options="P,Q,R" repeating="true"/>
+				<Qualifier mandatory="false" name="CODO" options="P,Q,R" repeating="true"/>
+				<Qualifier mandatory="false" name="REGR" options="P,Q,R" repeating="false"/>
+				<Qualifier mandatory="false" name="DROP" options="P,Q,R" repeating="false"/>
+				<Qualifier mandatory="false" name="PSAG" options="P,Q,R" repeating="false"/>
+				<Qualifier mandatory="false" name="RESA" options="P,Q,R" repeating="true"/>
+				<Qualifier mandatory="false" name="SOLA" options="P,Q,R" repeating="true"/>
+				<Qualifier mandatory="false" name="INFA" options="P,Q,R" repeating="false"/>
+				<Field name="95P"/>
+				<Field name="95Q"/>
+				<Field name="95R"/>
+			</FieldChoice>
+		</Record>
+	</Message>
+</Swift>

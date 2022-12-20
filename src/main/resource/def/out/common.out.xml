@@ -1,0 +1,47 @@
+<OutputFormatDefinition type="COMMON-SETTINGS">
+	<Name>Common Settings</Name>
+	<Settings>
+		<Property id="MappingVersion">
+			<Name>Mapping Version</Name>
+			<Description>Version of this mapping</Description>
+			<DefaultValue>1.0.0.0</DefaultValue>
+			<Metadata type="Text"/>
+		</Property>
+		<Property id="MessageTranslatorVersion">
+			<Name>Translator Version</Name>
+			<Description>Version of this translation interface</Description>
+			<DefaultValue>8.1.1.1</DefaultValue>
+			<Metadata type="Text"/>
+		</Property>
+		<Property id="MappingAuthor">
+			<Name>Author</Name>
+			<Description>Name of the author of this mapping</Description>
+			<DefaultValue/>
+			<Metadata type="Text"/>
+		</Property>
+		<Property id="MappingComment">
+			<Name>Comment</Name>
+			<Description>Comment for this mapping</Description>
+			<DefaultValue/>
+			<Metadata type="Text" multiline="3"/>
+		</Property>
+		<Property id="MappingDesignerVersion">
+			<Name>MappingDesigner Version</Name>
+			<Description>Version of Mapping Designer Tool</Description>
+			<DefaultValue>1.0.0.0</DefaultValue>
+			<Metadata type="Text" readonly="true"/>
+		</Property>
+		<Property id="LastChangedTms">
+			<Name>Last Changed</Name>
+			<Description>Last changed timestamp</Description>
+			<DefaultValue/>
+			<Metadata type="Text" readonly="true"/>
+		</Property>
+		<Property id="RCode">
+			<Name>RCode</Name>
+			<Description>Version of Restriction File</Description>
+			<DefaultValue/>
+			<Metadata type="Text" readonly="true"/>
+		</Property>		
+	</Settings>
+</OutputFormatDefinition>
